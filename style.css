@@ -482,3 +482,246 @@ footer {
         font-size: 30px;
     }
 }
+/* Services Page Specific Styles */
+
+/* Page Hero for Services */
+#page-hero.services-hero {
+    min-height: 300px; /* Shorter hero for inner pages */
+    background: #333 url('./images/drilling_walls_for_pipes.jpg') no-repeat center center/cover; /* Use a relevant image */
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+}
+
+#page-hero.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#page-hero.services-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+#page-hero.services-hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#page-hero.services-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Services Overview Section */
+#services-overview {
+    background: #fdfdfd;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: #eee 1px solid;
+}
+
+#services-overview h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+#services-overview p {
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Detailed Services Section */
+#detailed-services {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.service-category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically align items */
+    margin-bottom: 60px; /* Space between categories */
+    background: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.service-category:nth-child(even) { /* Alternate image/text order */
+    flex-direction: row-reverse;
+}
+
+.service-category img {
+    width: 100%;
+    max-width: 500px; /* Max width for image */
+    height: 350px; /* Fixed height for consistency */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0; /* Remove border-radius from general img rule */
+    margin: 0; /* Remove margin from general img rule */
+}
+
+.service-details {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.service-details h3 {
+    font-size: 32px;
+    color: #77aaff;
+    margin-bottom: 20px;
+}
+
+.service-details p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.service-details ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.service-details ul li::before {
+    content: '✓'; /* Checkmark icon */
+    color: #77aaff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Services CTA Section (reusing cta styles) */
+#services-cta {
+    background: linear-gradient(to right, #333, #555);
+    padding: 70px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#services-cta h2 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#services-cta h2::after {
+    background-color: #fff;
+}
+
+#services-cta p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #eee;
+}
+
+/* Media Queries for Services Page */
+@media (max-width: 992px) {
+    .service-category {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .service-category:nth-child(even) {
+        flex-direction: column; /* Maintain stacking for even children */
+    }
+
+    .service-category img {
+        max-width: 100%;
+        height: 250px; /* Adjust height for smaller screens */
+        border-radius: 10px 10px 0 0;
+    }
+
+    .service-details {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .service-details ul {
+        text-align: left; /* Align list items left even if text is centered */
+        display: inline-block; /* Allow centering of the ul itself */
+    }
+}
+
+@media (max-width: 768px) {
+    #page-hero.services-hero h1 {
+        font-size: 40px;
+    }
+
+    #page-hero.services-hero p {
+        font-size: 18px;
+    }
+
+    #services-overview h2 {
+        font-size: 32px;
+    }
+
+    .service-details h3 {
+        font-size: 24px;
+    }
+
+    #services-cta h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-hero.services-hero h1 {
+        font-size: 30px;
+    }
+
+    #page-hero.services-hero p {
+        font-size: 16px;
+    }
+
+    #services-overview h2 {
+        font-size: 28px;
+    }
+
+    .service-details {
+        padding: 20px;
+    }
+
+    .service-details h3 {
+        font-size: 22px;
+    }
+
+    .service-details ul li {
+        font-size: 0.95em;
+    }
+
+    #services-cta h2 {
+        font-size: 30px;
+    }
+}
