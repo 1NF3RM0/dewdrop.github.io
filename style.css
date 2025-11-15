@@ -7,6 +7,9 @@ body {
     background: #f8f8f8; /* Lighter background */
     color: #333;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-rendering: optimizeLegibility; /* Improve font rendering */
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
 }
 
 *, *::before, *::after {
@@ -15,7 +18,7 @@ body {
 
 .container {
     width: 90%; /* Slightly wider container */
-    max-width: 1100px; /* Max width for large screens */
+    max-width: 1200px; /* Increased max width for large screens */
     margin: auto;
     overflow: hidden;
     padding: 0 20px; /* Add some horizontal padding */
@@ -28,7 +31,10 @@ header {
     padding: 15px 0; /* Adjusted padding */
     min-height: 70px;
     border-bottom: #77aaff 4px solid; /* Thicker border */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* More pronounced shadow */
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure header is on top */
 }
 
 header a {
@@ -82,7 +88,7 @@ header a:hover {
 
 /* Hero Section */
 #hero {
-    min-height: 450px; /* Slightly taller hero */
+    min-height: 500px; /* Taller hero */
     background: #333 url('./images/front_wide_view_paint_job.jpg') no-repeat center center/cover;
     text-align: center;
     color: #fff;
@@ -91,6 +97,7 @@ header a:hover {
     justify-content: center;
     flex-direction: column;
     position: relative; /* For overlay */
+    padding: 20px; /* Ensure padding on small screens */
 }
 
 #hero::before { /* Dark overlay for better text readability */
@@ -100,7 +107,7 @@ header a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
 }
 
 #hero .container {
@@ -109,19 +116,19 @@ header a:hover {
 }
 
 #hero h1 {
-    font-size: 60px; /* Larger hero title */
+    font-size: 65px; /* Larger hero title */
     margin-bottom: 15px;
     line-height: 1.1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Text shadow for readability */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8); /* More pronounced text shadow */
 }
 
 #hero p {
-    font-size: 22px;
+    font-size: 24px; /* Larger hero paragraph */
     margin-bottom: 30px;
-    max-width: 700px;
+    max-width: 800px; /* Wider paragraph */
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .button_1 {
@@ -129,107 +136,115 @@ header a:hover {
     height: auto; /* Auto height for better padding */
     background: #77aaff;
     border: none;
-    padding: 12px 25px; /* More padding */
+    padding: 15px 30px; /* More padding */
     color: #fff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px; /* Larger button text */
     border-radius: 5px; /* Rounded corners */
-    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Button shadow */
 }
 
 .button_1:hover {
     background: #5588dd; /* Darker on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    transform: translateY(-3px); /* More pronounced lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+/* Section General Styling */
+section {
+    padding: 80px 0; /* More vertical padding for sections */
+    position: relative;
+}
+
+section h2 {
+    font-size: 42px; /* Larger section titles */
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px; /* More space below title */
+    position: relative;
+}
+
+section h2::after { /* Underline effect for titles */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #77aaff;
+    border-radius: 2px;
+}
+
 
 /* Welcome Section */
 #welcome {
-    padding: 60px 0; /* More padding */
-    text-align: center;
     background: #fff;
-    border-bottom: #eee 1px solid; /* Lighter border */
-}
-
-#welcome h2 {
-    color: #333;
-    margin-bottom: 25px;
-    font-size: 36px;
+    border-bottom: #eee 1px solid;
 }
 
 #welcome p {
     max-width: 900px;
     margin: 0 auto 20px auto;
-    font-size: 1.15em;
+    font-size: 1.2em; /* Slightly larger text */
     line-height: 1.8;
+    color: #555;
 }
 
 /* Why Choose Us Section */
 #why-choose-us {
-    padding: 60px 0;
-    background: #f4f4f4;
-    text-align: center;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0); /* Subtle gradient background */
     border-bottom: #eee 1px solid;
-}
-
-#why-choose-us h2 {
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 36px;
 }
 
 #why-choose-us .container {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: space-around; /* Distribute items evenly */
-    gap: 20px; /* Gap between items */
+    justify-content: center; /* Center items */
+    gap: 30px; /* Increased gap between items */
 }
 
 .why-item {
     flex: 1; /* Allow items to grow and shrink */
-    min-width: 220px; /* Minimum width for items */
-    max-width: 280px; /* Maximum width for items */
+    min-width: 250px; /* Minimum width for items */
+    max-width: 300px; /* Maximum width for items */
     background: #fff;
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More prominent shadow */
+    padding: 35px 25px; /* More padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* More prominent shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    border: 1px solid #eee; /* Subtle border */
 }
 
 .why-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transform: translateY(-8px); /* More pronounced lift effect on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .why-item h3 {
     color: #77aaff;
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 24px; /* Larger heading */
 }
 
 .why-item p {
-    font-size: 1em;
+    font-size: 1.05em;
     line-height: 1.7;
+    color: #666;
 }
 
 /* Featured Services Section */
 #featured-services {
-    padding: 60px 0;
-    text-align: center;
     background: #fff;
     border-bottom: #eee 1px solid;
-}
-
-#featured-services h2 {
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 36px;
 }
 
 #featured-services .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -238,68 +253,81 @@ header a:hover {
     min-width: 280px;
     max-width: 350px;
     background: #fdfdfd;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 0; /* Remove padding from container, add to inner content */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    overflow: hidden; /* Hide overflowing image corners */
+    border: 1px solid #eee;
 }
 
 .service-preview:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .service-preview img {
     width: 100%;
-    max-width: 300px;
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Ensure images cover the area */
-    margin-bottom: 15px;
-    border-radius: 5px;
+    height: 220px; /* Slightly taller images */
+    object-fit: cover;
+    margin-bottom: 0; /* Remove margin below image */
+    border-radius: 10px 10px 0 0; /* Rounded top corners for image */
+}
+
+.service-preview .content { /* New div for text content */
+    padding: 25px;
 }
 
 .service-preview h3 {
     color: #333;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 26px; /* Larger heading */
 }
 
 .service-preview p {
-    font-size: 1em;
+    font-size: 1.05em;
     margin-bottom: 20px;
     line-height: 1.7;
+    color: #666;
 }
 
 /* Call to Action Section */
 #cta {
-    padding: 70px 0; /* More padding */
+    padding: 80px 0; /* More padding */
     background: #333;
     color: #fff;
     text-align: center;
+    background: linear-gradient(to right, #333, #555); /* Subtle gradient */
 }
 
 #cta h2 {
-    margin-bottom: 20px;
-    font-size: 40px;
+    margin-bottom: 25px;
+    font-size: 45px; /* Larger CTA title */
+    color: #fff; /* Ensure white color */
+}
+
+#cta h2::after { /* White underline for CTA title */
+    background-color: #fff;
 }
 
 #cta p {
-    font-size: 1.3em;
-    margin-bottom: 35px;
-    max-width: 800px;
+    font-size: 1.4em; /* Larger CTA paragraph */
+    margin-bottom: 40px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    color: #eee;
 }
 
 /* Footer Styles */
 footer {
-    padding: 25px; /* Adjusted padding */
-    margin-top: 0; /* Remove top margin */
+    padding: 30px; /* More padding */
     color: #fff;
     background-color: #222; /* Darker footer */
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Shadow for footer */
 }
 
 /* Clearfix */
@@ -310,6 +338,35 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    #hero h1 {
+        font-size: 55px;
+    }
+
+    #hero p {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 38px;
+    }
+
+    #why-choose-us .container,
+    #featured-services .container {
+        gap: 20px;
+    }
+
+    .why-item,
+    .service-preview {
+        min-width: 280px;
+        max-width: 45%; /* Allow two items per row on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     header #branding,
     header nav {
@@ -331,7 +388,7 @@ footer {
     }
 
     #hero h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     #hero p {
@@ -339,20 +396,22 @@ footer {
     }
 
     .button_1 {
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 12px 25px;
+        font-size: 18px;
     }
 
-    #welcome h2,
-    #why-choose-us h2,
-    #featured-services h2,
-    #cta h2 {
-        font-size: 30px;
+    section {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
     }
 
     #welcome p,
     #cta p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     #why-choose-us .container,
@@ -367,6 +426,14 @@ footer {
         max-width: 400px; /* Limit max width even when stacked */
         margin-bottom: 20px;
     }
+
+    .service-preview img {
+        height: 180px;
+    }
+
+    #cta h2 {
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -376,17 +443,28 @@ footer {
     }
 
     #hero h1 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     #hero p {
         font-size: 16px;
     }
 
-    #welcome h2,
-    #why-choose-us h2,
-    #featured-services h2,
+    section h2 {
+        font-size: 28px;
+    }
+
+    #welcome p,
+    #cta p {
+        font-size: 1em;
+    }
+
+    .why-item,
+    .service-preview {
+        width: 100%;
+    }
+
     #cta h2 {
-        font-size: 26px;
+        font-size: 30px;
     }
 }
