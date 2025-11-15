@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - DEW Drop Construction Company</title>
+  <title>Contact Us - DEW Drop Construction Company</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,20 +15,34 @@
       </div>
       <nav>
         <ul>
-          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="current"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="hero">
+  <section id="contact">
     <div class="container">
-      <h1>Your Vision, Our Foundation</h1>
-      <p>DEW Drop Construction: Building Dreams in Marondera, Zimbabwe</p>
-      <a href="contact.html" class="button_1">Get a Free Quote</a>
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align: center; margin-top: 20px;">
+        Phone: +263 771 234 567 | Email: info@dewdropconstruction.co.zw<br>
+        Location: Marondera, Zimbabwe
+      </p>
     </div>
   </section>
 
