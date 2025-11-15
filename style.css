@@ -239,17 +239,12 @@ section h2::after { /* Underline effect for titles */
 }
 
 #why-choose-us .container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center items */
-    gap: var(--spacing-l); /* Increased gap between items */
     align-items: stretch; /* Ensure all items in a row have consistent heights */
 }
 
 .why-item {
-    flex: 1; /* Allow items to grow and shrink */
-    min-width: 15.625rem; /* Minimum width for items */
-    max-width: 18.75rem; /* Maximum width for items */
+    display: inline-block;
+    width: 22%;
     min-height: 15.625rem; /* Baseline height for consistency */
     background: #fff;
     padding: var(--spacing-xl) var(--spacing-l); /* More padding */
