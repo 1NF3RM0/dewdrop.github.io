@@ -1,18 +1,99 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Services - DEW Drop Construction Company</title>
 <link href="images/logo(white background).png" rel="icon" type="image/png"/>
 <link href="style.css" rel="stylesheet"/>
+<style>
+/* Additional fixes for services layout */
+#detailed-services {
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+justify-content: center;
+padding: 50px 0;
+}
+
+.service-category {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	max-width: 400px;
+	flex: 1 1 300px;
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-category:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.service-category img {
+	width: 100%;
+	max-width: 100%;
+	min-height: 200px;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.service-details h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.service-details p {
+	font-size: 0.95rem;
+	margin-bottom: 10px;
+	color: #555;
+}
+
+.service-details ul {
+	text-align: left;
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+
+.service-details ul li {
+	margin-bottom: 5px;
+}
+
+.button-primary {
+	background-color: #007acc;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 18px;
+	border-radius: 6px;
+	transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+	background-color: #005fa3;
+}
+
+@media (max-width: 768px) {
+	#detailed-services {
+	gap: 30px;
+	padding: 30px 0;
+	}
+}
+</style>
 </head>
-<body><a class="skip-to-content" href="#main-content">Skip to main content</a>
+<body>
+<a class="skip-to-content" href="#main-content">Skip to main content</a>
+
 <header>
 <div class="container">
 <div id="branding">
-<img alt="DEW Drop Construction Logo" src="images/logo(transparent backgroung).png"/>
+<img src="images/logo(transparent backgroung).png" alt="DEW Drop Construction Logo" style="height:50px; margin-right:10px;"/>
 <h1><span class="highlight">DEW Drop</span> Construction</h1>
 </div>
 <nav aria-label="Main navigation">
@@ -25,12 +106,14 @@
 </nav>
 </div>
 </header>
+
 <section class="services-hero" id="page-hero">
 <div class="container">
 <h1>Our Comprehensive Services</h1>
 <p>Building Dreams, One Project at a Time – Discover What We Can Do For You.</p>
 </div>
 </section>
+
 <section id="main-content">
 <div class="container">
 <h2>Dedicated to Quality Craftsmanship</h2>
@@ -38,107 +121,138 @@
 <p>Explore our core services below and see how we can bring your vision to life.</p>
 </div>
 </section>
+
 <section id="detailed-services">
-<div class="container">
+<!-- Painting -->
 <div class="service-category">
-<img alt="Painting Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/excellent_paint_job.webp" srcset="images_webp/excellent_paint_job-320.webp 320w, images_webp/excellent_paint_job-640.webp 640w, images_webp/excellent_paint_job-1280.webp 1280w"/>
+<img src="images_webp/excellent_paint_job.webp" 
+srcset="images_webp/excellent_paint_job-320.webp 320w, images_webp/excellent_paint_job-640.webp 640w, images_webp/excellent_paint_job-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="Painting Services"/>
 <div class="service-details">
 <h3>Painting Services</h3>
-<p>Revitalize your property with our professional interior and exterior painting services. We use high-quality paints and precise techniques to deliver smooth, long-lasting finishes that enhance curb appeal and protect your investment.</p>
+<p>Revitalize your property with our professional interior and exterior painting services. Smooth, long-lasting finishes with premium paints.</p>
 <ul>
-<li>Interior &amp; Exterior Painting</li>
-<li>Surface Preparation &amp; Repair</li>
+<li>Interior & Exterior Painting</li>
+<li>Surface Preparation & Repair</li>
 <li>Color Consultation</li>
 <li>Specialty Finishes</li>
 </ul>
-<a class="button button-primary" href="contact.html">Get a Painting Quote</a>
+<a href="contact.html" class="button button-primary">Get a Painting Quote</a>
 </div>
 </div>
+
+<!-- Plumbing -->
 <div class="service-category">
-<img alt="Plumbing Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/drilling_walls_for_pipes.webp" srcset="images_webp/drilling_walls_for_pipes-320.webp 320w, images_webp/drilling_walls_for_pipes-640.webp 640w, images_webp/drilling_walls_for_pipes-1280.webp 1280w"/>
+<img src="images_webp/drilling_walls_for_pipes.webp"
+srcset="images_webp/drilling_walls_for_pipes-320.webp 320w, images_webp/drilling_walls_for_pipes-640.webp 640w, images_webp/drilling_walls_for_pipes-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="Plumbing Services"/>
 <div class="service-details">
 <h3>Plumbing Solutions</h3>
-<p>From minor repairs to complete system installations, our certified plumbers ensure efficient and reliable water systems for your home or business. We handle all aspects of plumbing with expertise and adherence to safety standards.</p>
+<p>Certified plumbers delivering efficient and reliable water systems for your home or business.</p>
 <ul>
-<li>Pipe Installation &amp; Repair</li>
+<li>Pipe Installation & Repair</li>
 <li>Water Heater Services</li>
 <li>Drain Cleaning</li>
 <li>Fixture Installation</li>
 <li>Emergency Plumbing</li>
 </ul>
-<a class="button button-primary" href="contact.html">Request Plumbing Service</a>
+<a href="contact.html" class="button button-primary">Request Plumbing Service</a>
 </div>
 </div>
+
+<!-- Tiling -->
 <div class="service-category">
-<img alt="Tiling Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/pan_installation.webp" srcset="images_webp/pan_installation-320.webp 320w, images_webp/pan_installation-640.webp 640w, images_webp/pan_installation-1280.webp 1280w"/>
+<img src="images_webp/pan_installation.webp"
+srcset="images_webp/pan_installation-320.webp 320w, images_webp/pan_installation-640.webp 640w, images_webp/pan_installation-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="Tiling Services"/>
 <div class="service-details">
 <h3>Tiling Expertise</h3>
-<p>Elevate the look and feel of your spaces with our exquisite tiling services. We offer a wide selection of materials and patterns, expertly installed for durability and a flawless finish in kitchens, bathrooms, floors, and walls.</p>
+<p>Expertly installed tiles for kitchens, bathrooms, floors, and walls. Durable and elegant finishes.</p>
 <ul>
-<li>Floor &amp; Wall Tiling</li>
-<li>Bathroom &amp; Kitchen Tiling</li>
-<li>Tile Repair &amp; Grouting</li>
+<li>Floor & Wall Tiling</li>
+<li>Bathroom & Kitchen Tiling</li>
+<li>Tile Repair & Grouting</li>
 <li>Custom Tile Designs</li>
 </ul>
-<a class="button button-primary" href="contact.html">Explore Tiling Options</a>
+<a href="contact.html" class="button button-primary">Explore Tiling Options</a>
 </div>
 </div>
+
+<!-- General Construction -->
 <div class="service-category">
-<img alt="General Construction Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/exquisite_brick_dressing.webp" srcset="images_webp/exquisite_brick_dressing-320.webp 320w, images_webp/exquisite_brick_dressing-640.webp 640w, images_webp/exquisite_brick_dressing-1280.webp 1280w"/>
+<img src="images_webp/exquisite_brick_dressing.webp"
+srcset="images_webp/exquisite_brick_dressing-320.webp 320w, images_webp/exquisite_brick_dressing-640.webp 640w, images_webp/exquisite_brick_dressing-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="General Construction"/>
 <div class="service-details">
 <h3>General Construction</h3>
-<p>Our versatile team is adept at various general construction projects, from foundational work to structural enhancements. We manage every phase with meticulous planning and execution, ensuring robust and lasting results.</p>
+<p>From new builds to renovations, we ensure robust and lasting results for all construction projects.</p>
 <ul>
-<li>New Builds &amp; Extensions</li>
-<li>Renovations &amp; Remodeling</li>
-<li>Brickwork &amp; Masonry</li>
-<li>Roofing &amp; Carpentry</li>
+<li>New Builds & Extensions</li>
+<li>Renovations & Remodeling</li>
+<li>Brickwork & Masonry</li>
+<li>Roofing & Carpentry</li>
 </ul>
-<a class="button button-primary" href="contact.html">Start a Construction Project</a>
+<a href="contact.html" class="button button-primary">Start a Construction Project</a>
 </div>
 </div>
+
+<!-- Bathroom Renovations -->
 <div class="service-category">
-<img alt="Bathroom Renovation Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/classy_tub_install.webp" srcset="images_webp/classy_tub_install-320.webp 320w, images_webp/classy_tub_install-640.webp 640w, images_webp/classy_tub_install-1280.webp 1280w"/>
+<img src="images_webp/classy_tub_install.webp"
+srcset="images_webp/classy_tub_install-320.webp 320w, images_webp/classy_tub_install-640.webp 640w, images_webp/classy_tub_install-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="Bathroom Renovations"/>
 <div class="service-details">
 <h3>Bathroom Renovations</h3>
-<p>Transform your bathroom into a sanctuary with our comprehensive renovation services. We handle everything from design to installation, including fixtures, tiling, plumbing, and aesthetic finishes.</p>
+<p>Transform your bathroom into a modern, functional, and aesthetic space.</p>
 <ul>
 <li>Full Bathroom Remodels</li>
 <li>Fixture Upgrades</li>
-<li>Shower &amp; Tub Installation</li>
-<li>Vanity &amp; Cabinetry</li>
+<li>Shower & Tub Installation</li>
+<li>Vanity & Cabinetry</li>
 </ul>
-<a class="button button-primary" href="contact.html">Plan Your Bathroom Remodel</a>
+<a href="contact.html" class="button button-primary">Plan Your Bathroom Remodel</a>
 </div>
 </div>
+
+<!-- Geyser Installations -->
 <div class="service-category">
-<img alt="Geyser Installation Services" sizes="(max-width: 600px) 320px, (max-width: 1200px) 640px, 1280px" src="images_webp/man_on_roof_fitting_gyser.webp" srcset="images_webp/man_on_roof_fitting_gyser-320.webp 320w, images_webp/man_on_roof_fitting_gyser-640.webp 640w, images_webp/man_on_roof_fitting_gyser-1280.webp 1280w"/>
+<img src="images_webp/man_on_roof_fitting_gyser.webp"
+srcset="images_webp/man_on_roof_fitting_gyser-320.webp 320w, images_webp/man_on_roof_fitting_gyser-640.webp 640w, images_webp/man_on_roof_fitting_gyser-1280.webp 1280w"
+sizes="(max-width:600px) 320px, (max-width:1200px) 640px, 1280px"
+alt="Geyser Installations"/>
 <div class="service-details">
 <h3>Geyser Installations</h3>
-<p>Ensure a consistent supply of hot water with our professional geyser installation, repair, and maintenance services. We work with various types of geysers, including solar water heaters.</p>
+<p>Professional geyser and solar water heater installation, repair, and maintenance.</p>
 <ul>
 <li>New Geyser Installation</li>
-<li>Geyser Repair &amp; Servicing</li>
+<li>Geyser Repair & Servicing</li>
 <li>Solar Water Heater Setup</li>
 <li>Pressure Valve Checks</li>
 </ul>
-<a class="button button-primary" href="contact.html">Get Geyser Service</a>
-</div>
+<a href="contact.html" class="button button-primary">Get Geyser Service</a>
 </div>
 </div>
 </section>
+
 <section class="cta-section" id="services-cta">
 <div class="container">
 <h2>Ready to Enhance Your Property?</h2>
 <p>Contact DEW Drop Construction today for a free consultation and a detailed quote for your next project.</p>
-<a class="button button-primary" href="contact.html">Get a Free Quote</a>
+<a href="contact.html" class="button button-primary">Get a Free Quote</a>
 </div>
 </section>
+
 <footer>
 <div class="container">
 <p>DEW Drop Construction Company © <span id="current-year"></span></p>
 </div>
 </footer>
-<script defer="" src="script.js"></script>
+
+<script defer src="script.js"></script>
 </body>
 </html>
