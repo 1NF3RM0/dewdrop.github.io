@@ -269,10 +269,18 @@ section h2::after { /* Underline effect for titles */
 
 .service-preview img {
     width: 100%;
-    height: 220px; /* Slightly taller images */
-    object-fit: cover;
+    height: 220px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+    object-position: center; /* Center the image within its content box */
     margin-bottom: 0; /* Remove margin below image */
     border-radius: 10px 10px 0 0; /* Rounded top corners for image */
+}
+
+/* General responsive image handling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
 }
 
 .service-preview .content { /* New div for text content */
