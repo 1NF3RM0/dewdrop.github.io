@@ -203,12 +203,14 @@ section h2::after { /* Underline effect for titles */
     flex-wrap: wrap; /* Allow items to wrap */
     justify-content: center; /* Center items */
     gap: 30px; /* Increased gap between items */
+    align-items: stretch; /* Ensure all items in a row have consistent heights */
 }
 
 .why-item {
     flex: 1; /* Allow items to grow and shrink */
     min-width: 250px; /* Minimum width for items */
     max-width: 300px; /* Maximum width for items */
+    min-height: 250px; /* Baseline height for consistency */
     background: #fff;
     padding: 35px 25px; /* More padding */
     border-radius: 10px; /* More rounded corners */
@@ -246,12 +248,14 @@ section h2::after { /* Underline effect for titles */
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    align-items: stretch; /* Ensure all items in a row have consistent heights */
 }
 
 .service-preview {
     flex: 1;
     min-width: 280px;
     max-width: 350px;
+    min-height: 400px; /* Baseline height for consistency, adjust as needed */
     background: #fdfdfd;
     padding: 0; /* Remove padding from container, add to inner content */
     border-radius: 10px;
