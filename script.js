@@ -1,34 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     /* -------------------------------------------------------
-     *       1. Dynamic Year in Footer
-     *    -------------------------------------------------------- */
+     * 1. Dynamic Year in Footer
+     * -------------------------------------------------------- */
     const yearSpan = document.getElementById("current-year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     
     
     /* -------------------------------------------------------
-     *       2. Active Navigation Highlight
-     *    -------------------------------------------------------- */
+     * 2. Active Navigation Highlight
+     * -------------------------------------------------------- */
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll("header nav ul li a");
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute("href");
-        
         if (linkPage === currentPage) {
-            document
-            .querySelector("header nav ul li.current")
-            ?.classList.remove("current");
-            
+            document.querySelector("header nav ul li.current")?.classList.remove("current");
             link.parentElement.classList.add("current");
         }
     });
     
     
     /* -------------------------------------------------------
-     *       3. Smooth Scroll for Anchor Links
-     *    -------------------------------------------------------- */
+     * 3. Smooth Scroll for Anchor Links
+     * -------------------------------------------------------- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             const targetEl = document.querySelector(this.getAttribute("href"));
@@ -41,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     /* -------------------------------------------------------
-     *       4. Sticky Header + Shrink on Scroll
-     *    -------------------------------------------------------- */
+     * 4. Sticky Header + Shrink on Scroll
+     * -------------------------------------------------------- */
     const header = document.querySelector("header");
     let lastScroll = 0;
     
@@ -60,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     /* -------------------------------------------------------
-     *       5. Fade-In Sections on Scroll (Intersection Observer)
-     *    -------------------------------------------------------- */
+     * 5. Fade-In Sections on Scroll (Intersection Observer)
+     * -------------------------------------------------------- */
     const revealElements = document.querySelectorAll(
         "section, .service-preview, .why-item"
     );
@@ -79,5 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     
     revealElements.forEach(el => revealObserver.observe(el));
+    
+    
+    /* -------------------------------------------------------
+     * 6. Mobile Menu Toggle
+     * -------------------------------------------------------- */
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+    }
     
 });
