@@ -286,6 +286,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block; /* Remove extra space below images */
+    margin: 0 auto; /* Center images horizontally */
 }
 
 .service-preview .content { /* New div for text content */
