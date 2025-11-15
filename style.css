@@ -48,7 +48,7 @@ body {
 .container {
     width: 90%; /* Slightly wider container */
     max-width: 1200px; /* Increased max width for large screens */
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
     padding: 0 20px; /* Add some horizontal padding */
 }
@@ -64,6 +64,12 @@ header {
     position: sticky; /* Make header sticky */
     top: 0;
     z-index: 1000; /* Ensure header is on top */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header a {
