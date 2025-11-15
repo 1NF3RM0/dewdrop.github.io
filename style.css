@@ -1,6 +1,6 @@
 /* General Body Styles */
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-display: swap;
     line-height: 1.6;
     margin: 0;
     padding: 0;
