@@ -53,7 +53,7 @@ This website is designed for static hosting. It can be easily deployed to platfo
 
 For inquiries or to get a free quote, please contact us:
 
-*   **Phone:** +263 771 234 567
+*   **Phone:** +263 71 6988241
 *   **Email:** info@dewdropconstruction.co.zw
 *   **Location:** Marondera, Zimbabwe
 
